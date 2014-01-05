@@ -5,7 +5,6 @@ package com.insecure.videostore;
  * User: Karan.Khosla
  */
 
-
 public class Rental {
     private Movie movie;
     private int daysRented;
