@@ -1,0 +1,139 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html id="htmlId">
+<head>
+    <title>Coverage Report :: Customer</title>
+    <style type="text/css">
+        @import "../../.css/coverage.css";
+    </style>
+</head>
+
+<body>
+<div class="header"></div>
+
+<div class="content">
+    <div class="breadCrumbs">
+        [ <a href="../../index.html">all classes</a> ]
+        [ <a href="../index.html">com.insecure.videostore</a> ]
+    </div>
+
+    <h1>Coverage Summary for Class: Customer (com.insecure.videostore)</h1>
+
+    <table class="coverageStats">
+        <tr>
+            <th class="name">Class</th>
+            <th class="coverageStat
+">
+                Class, %
+            </th>
+            <th class="coverageStat
+">
+                Method, %
+            </th>
+            <th class="coverageStat
+">
+                Line, %
+            </th>
+        </tr>
+        <tr>
+            <td class="name">Customer</td>
+            <td class="coverageStat">
+  <span class="percent">
+    100%
+  </span>
+  <span class="absValue">
+    (1/ 1)
+  </span>
+            </td>
+            <td class="coverageStat">
+  <span class="percent">
+    100%
+  </span>
+  <span class="absValue">
+    (8/ 8)
+  </span>
+            </td>
+            <td class="coverageStat">
+  <span class="percent">
+    100%
+  </span>
+  <span class="absValue">
+    (20/ 20)
+  </span>
+            </td>
+        </tr>
+
+    </table>
+
+    <br/>
+    <br/>
+
+
+    <div class="sourceCode"><i>1</i>&nbsp;package com.insecure.videostore;
+        <i>2</i>&nbsp;
+        <i>3</i>&nbsp;/**
+        <i>4</i>&nbsp; * Created with IntelliJ IDEA.
+        <i>5</i>&nbsp; * User: Karan.Khosla
+        <i>6</i>&nbsp; */
+        <i>7</i>&nbsp;
+        <i>8</i>&nbsp;
+        <i>9</i>&nbsp;import java.util.ArrayList;
+        <i>10</i>&nbsp;import java.util.List;
+        <i>11</i>&nbsp;
+        <i>12</i>&nbsp;public class Customer {
+        <i>13</i>&nbsp; private String customerName;
+        <b class="fc"><i>14</i>&nbsp; private List&lt;Rental&gt; rentals = new ArrayList&lt;Rental&gt;();</b>
+        <b class="fc"><i>15</i>&nbsp; private double totalAmount = 0;</b>
+        <b class="fc"><i>16</i>&nbsp; private int frequentRenterPoints = 0;</b>
+        <i>17</i>&nbsp;
+        <b class="fc"><i>18</i>&nbsp; public Customer(String customerName) {</b>
+        <b class="fc"><i>19</i>&nbsp; this.customerName = customerName;</b>
+        <i>20</i>&nbsp; }
+        <i>21</i>&nbsp;
+        <i>22</i>&nbsp; public void addRental(Rental rental) {
+        <b class="fc"><i>23</i>&nbsp; rentals.add(rental);</b>
+        <i>24</i>&nbsp; }
+        <i>25</i>&nbsp;
+        <i>26</i>&nbsp; public String statement() {
+        <b class="fc"><i>27</i>&nbsp; String result = header();</b>
+        <b class="fc"><i>28</i>&nbsp; result = renterLines(result);</b>
+        <b class="fc"><i>29</i>&nbsp; result += footer();</b>
+        <b class="fc"><i>30</i>&nbsp; return result;</b>
+        <i>31</i>&nbsp; }
+        <i>32</i>&nbsp;
+        <i>33</i>&nbsp; private String header() {
+        <b class="fc"><i>34</i>&nbsp; return String.format(&quot;Rental Record for %s\n&quot;, customerName);</b>
+        <i>35</i>&nbsp; }
+        <i>36</i>&nbsp;
+        <i>37</i>&nbsp; private String renterLines(String renterLine) {
+        <b class="fc"><i>38</i>&nbsp; for (Rental rental : rentals) {</b>
+        <b class="fc"><i>39</i>&nbsp; totalAmount += rental.determineRentalAmount();</b>
+        <b class="fc"><i>40</i>&nbsp; frequentRenterPoints += rental.determineFrequentRenterPoints();</b>
+        <b class="fc"><i>41</i>&nbsp; renterLine += String.format(&quot;\t%s\t%.1f\n&quot;, rental.movieTitle(),
+            rental.determineRentalAmount());</b>
+        <b class="fc"><i>42</i>&nbsp; }</b>
+        <b class="fc"><i>43</i>&nbsp; return renterLine;</b>
+        <i>44</i>&nbsp; }
+        <i>45</i>&nbsp;
+        <i>46</i>&nbsp; private String footer() {
+        <b class="fc"><i>47</i>&nbsp; return String.format(&quot;You owed %.1f\nYou earned %d frequent renter points\n&quot;,
+            totalAmount, frequentRenterPoints);</b>
+        <i>48</i>&nbsp; }
+        <i>49</i>&nbsp;
+        <i>50</i>&nbsp; public double totalAmount() {
+        <b class="fc"><i>51</i>&nbsp; return totalAmount;</b>
+        <i>52</i>&nbsp; }
+        <i>53</i>&nbsp;
+        <i>54</i>&nbsp; public int earnedFrequentRenterPoints() {
+        <b class="fc"><i>55</i>&nbsp; return frequentRenterPoints;</b>
+        <i>56</i>&nbsp; }
+        <i>57</i>&nbsp;}
+    </div>
+</div>
+
+<div class="footer">
+
+    <div style="float:right;">generated on 2014-01-05 16:13</div>
+</div>
+</body>
+</html>

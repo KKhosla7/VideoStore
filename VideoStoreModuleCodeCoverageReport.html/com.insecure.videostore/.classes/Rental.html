@@ -1,0 +1,110 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html id="htmlId">
+<head>
+    <title>Coverage Report :: Rental</title>
+    <style type="text/css">
+        @import "../../.css/coverage.css";
+    </style>
+</head>
+
+<body>
+<div class="header"></div>
+
+<div class="content">
+    <div class="breadCrumbs">
+        [ <a href="../../index.html">all classes</a> ]
+        [ <a href="../index.html">com.insecure.videostore</a> ]
+    </div>
+
+    <h1>Coverage Summary for Class: Rental (com.insecure.videostore)</h1>
+
+    <table class="coverageStats">
+        <tr>
+            <th class="name">Class</th>
+            <th class="coverageStat
+">
+                Class, %
+            </th>
+            <th class="coverageStat
+">
+                Method, %
+            </th>
+            <th class="coverageStat
+">
+                Line, %
+            </th>
+        </tr>
+        <tr>
+            <td class="name">Rental</td>
+            <td class="coverageStat">
+  <span class="percent">
+    100%
+  </span>
+  <span class="absValue">
+    (1/ 1)
+  </span>
+            </td>
+            <td class="coverageStat">
+  <span class="percent">
+    100%
+  </span>
+  <span class="absValue">
+    (4/ 4)
+  </span>
+            </td>
+            <td class="coverageStat">
+  <span class="percent">
+    100%
+  </span>
+  <span class="absValue">
+    (6/ 6)
+  </span>
+            </td>
+        </tr>
+
+    </table>
+
+    <br/>
+    <br/>
+
+
+    <div class="sourceCode"><i>1</i>&nbsp;package com.insecure.videostore;
+        <i>2</i>&nbsp;
+        <i>3</i>&nbsp;/**
+        <i>4</i>&nbsp; * Created with IntelliJ IDEA.
+        <i>5</i>&nbsp; * User: Karan.Khosla
+        <i>6</i>&nbsp; */
+        <i>7</i>&nbsp;
+        <i>8</i>&nbsp;
+        <i>9</i>&nbsp;public class Rental {
+        <i>10</i>&nbsp; private Movie movie;
+        <i>11</i>&nbsp; private int daysRented;
+        <i>12</i>&nbsp;
+        <b class="fc"><i>13</i>&nbsp; public Rental(Movie movie, int daysRented) {</b>
+        <b class="fc"><i>14</i>&nbsp; this.movie = movie;</b>
+        <b class="fc"><i>15</i>&nbsp; this.daysRented = daysRented;</b>
+        <i>16</i>&nbsp; }
+        <i>17</i>&nbsp;
+        <i>18</i>&nbsp; public String movieTitle() {
+        <b class="fc"><i>19</i>&nbsp; return movie.getTitle();</b>
+        <i>20</i>&nbsp; }
+        <i>21</i>&nbsp;
+        <i>22</i>&nbsp; int determineFrequentRenterPoints() {
+        <b class="fc"><i>23</i>&nbsp; return movie.determineFrequentRenterPoints(daysRented);</b>
+        <i>24</i>&nbsp; }
+        <i>25</i>&nbsp;
+        <i>26</i>&nbsp; double determineRentalAmount() {
+        <b class="fc"><i>27</i>&nbsp; return movie.determineRentalAmount(daysRented);</b>
+        <i>28</i>&nbsp; }
+        <i>29</i>&nbsp;
+        <i>30</i>&nbsp;}
+    </div>
+</div>
+
+<div class="footer">
+
+    <div style="float:right;">generated on 2014-01-05 16:13</div>
+</div>
+</body>
+</html>

@@ -2,7 +2,7 @@ package com.insecure.videostore;
 
 /**
  * Created with IntelliJ IDEA.
- * User: Karan_Khosla
+ * User: Karan.Khosla
  */
 
 
@@ -15,11 +15,16 @@ public class Rental {
         this.daysRented = daysRented;
     }
 
-    public int getDaysRented() {
-        return daysRented;
+    public String movieTitle() {
+        return movie.getTitle();
     }
 
-    public Movie getMovie() {
-        return movie;
+    int determineFrequentRenterPoints() {
+        return movie.determineFrequentRenterPoints(daysRented);
     }
+
+    double determineRentalAmount() {
+        return movie.determineRentalAmount(daysRented);
+    }
+
 }
